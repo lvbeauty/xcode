@@ -142,3 +142,17 @@ if assumedString != nil{
 if let definiteString = assumedString{
     print(definiteString)
 }
+
+
+class Opt{
+    var opt: String!
+    func ret() -> String {
+        opt = "abc"
+        return opt
+    }
+}
+
+let abc = Opt()
+abc.ret()
+
+

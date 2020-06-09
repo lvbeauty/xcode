@@ -22,6 +22,7 @@ let boolBum = nsNum3.boolValue
 //  compare 2 NSNumber value
 let nsNum4: NSNumber = 10
 let nsNum5: NSNumber = 10.1
+let nsNum6: NSNumber = true
 let bl: Bool = nsNum4.isEqual(to: nsNum5)
 let result = nsNum5.compare(nsNum4) // Question????
 print(result.rawValue)
@@ -41,11 +42,21 @@ let nsNum: NSNumber = NSNumber(floatLiteral: NSString(string: str).doubleValue)
 
 struct CheckingDiffInits{
     var var1 = 123
-    var var2 = "abc"
+    var var2: String!
+//    var var3 = 000
+//    init() {    // Default Init
+//
+//    }
+//    init(Var1: Int, Var2: Int) {
+//        self.var1 = Var1
+//        self.var2 = Var2
+//        self.var3 = Var1 + Var2
+//    }
+    
 }
 
-let objStruct = CheckingDiffInits(var1: 999, var2: "good")
-
+let objStruct = CheckingDiffInits(var1: 1000, var2: "a")
+//objStruct.var3
 print(objStruct.var1, "-", objStruct.var2)
 
 class CheckingDiffInitsClass
@@ -53,16 +64,16 @@ class CheckingDiffInitsClass
     var var1 = 456
     var var2 = "efg"
     
-    init() {    // Default Init
-
-    }
-    
-    init(newInt: Int, newStr: String) {     // Custom Init
-        self.var1 = newInt
-        self.var2 = newStr
-    }
+//    init() {    // Default Init
+//
+//    }
+//
+//    init(newInt: Int, newStr: String) {     // Custom Init
+//        self.var1 = newInt
+//        self.var2 = newStr
+//    }
 }
 
-let objClass = CheckingDiffInitsClass(newInt: 1000, newStr: "Excellent")
+let objClass = CheckingDiffInitsClass() //var1: 1000, var2: "Excellent")
 
 print(objClass.var1, "-", objClass.var2)
